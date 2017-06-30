@@ -364,11 +364,15 @@ ul{
 }
 #tabs > a{
     display: inline-block;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+#tabs > a > i{
+    display: inline-block;
     width: 1.2rem;
     height: 1.2rem;
     border-radius:50%;
     background: #d0d0d0;
-    margin: 1rem;
 }
 #tabs > .current{
     background: #800;
