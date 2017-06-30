@@ -374,7 +374,7 @@ ul{
     border-radius:50%;
     background: #d0d0d0;
 }
-#tabs > .current{
+#tabs > a > .current{
     background: #800;
 }
 #exp-content > div{
