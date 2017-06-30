@@ -349,16 +349,13 @@
                 var bIsAndroid = sUserAgent.match(/android/i) == "android";
                 var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
                 var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-                document.writeln("您的浏览设备为：");
                 if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-                    console.log("phone");
                     page5Container.classList.add("swiper-container");
                     page5Wrapper.classList.add("swiper-wrapper");
                     for(var i=0; i<page5Sliders.length; i++){
                         page5Sliders[i].classList.add("swiper-slide");
                     }
                 } else {
-                    console.log("pc");
                     page5Container.classList.remove("swiper-container");
                     page5Wrapper.classList.remove("swiper-wrapper");
                     document.querySelector(".warn-tip").style.display = "none";
