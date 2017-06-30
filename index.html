@@ -239,7 +239,7 @@
                     </div>
                     <div id="tabs">
                         <a class="current" href="javascript:;"><i></i></a>
-                        <a href="javascript:;">i></i></a>
+                        <a href="javascript:;"><i></i></a>
                     </div>
                 </div>
             </div>
@@ -319,14 +319,15 @@
             },13);
 
             // experience
-            var tabs = document.querySelectorAll("#tabs > a");
+            var as = document.querySelectorAll("#tabs > a");
+            var tabs = document.querySelectorAll("#tabs > a > i");
             var contents = document.querySelectorAll("#exp-content > div");
-            for(var i=0; i<tabs.length; i++){
-                tabs[i].addEventListener("click",function () {
-                    for(var j=0; j<tabs.length; j++){
+            for(var i=0; i<as.length; i++){
+                as[i].addEventListener("click",function () {
+                    for(var j=0; j<as.length; j++){
                         tabs[j].classList.remove('current');
                         contents[j].classList.remove('current');
-                        if(this == tabs[j]){
+                        if(this == as[j]){
                             this.classList.add('current');
                             contents[j].classList.add('current');
                         }
