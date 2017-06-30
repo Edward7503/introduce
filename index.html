@@ -106,13 +106,6 @@
             .page5 div.wrapper div{
                 margin-top: 0;
             }
-            
-            [class='swiper-container'],
-            [class='swiper-wrapper'],
-            [class='swiper-slide']{
-                
-            }
-
         }
     </style>
 </head>
@@ -345,53 +338,35 @@
             var page5Container = document.querySelector('#page5_container');
             var page5Wrapper = document.querySelector('#items');
             var page5Sliders = document.querySelectorAll('#items > div');
-//             var screenWidth = 0;
-//             window.onresize = function(){
-//                 screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-//                 if(screenWidth < 768){
-//                     page5Container.classList.add("swiper-container");
-//                     page5Wrapper.classList.add("swiper-wrapper");
-//                     for(var i=0; i<page5Sliders.length; i++){
-//                         page5Sliders[i].classList.add("swiper-slide");
-//                     }
-//                 }else{
-//                     page5Container.classList.remove("swiper-container");
-//                     page5Wrapper.classList.remove("swiper-wrapper");
-//                     for(var i=0; i<page5Sliders.length; i++){
-//                         page5Sliders[i].classList.remove("swiper-slide");
-//                     }
-//                 }
-//                console.log(screenWidth);
-//             }
             
             function browserRedirect() {
-            var sUserAgent = navigator.userAgent.toLowerCase();
-            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-            var bIsAndroid = sUserAgent.match(/android/i) == "android";
-            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-            document.writeln("您的浏览设备为：");
-            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-                console.log("phone");
-                page5Container.classList.add("swiper-container");
-                page5Wrapper.classList.add("swiper-wrapper");
-                for(var i=0; i<page5Sliders.length; i++){
-                    page5Sliders[i].classList.add("swiper-slide");
+                var sUserAgent = navigator.userAgent.toLowerCase();
+                var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+                var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+                var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+                var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+                var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+                var bIsAndroid = sUserAgent.match(/android/i) == "android";
+                var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+                var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+                document.writeln("您的浏览设备为：");
+                if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                    console.log("phone");
+                    page5Container.classList.add("swiper-container");
+                    page5Wrapper.classList.add("swiper-wrapper");
+                    for(var i=0; i<page5Sliders.length; i++){
+                        page5Sliders[i].classList.add("swiper-slide");
+                    }
+                } else {
+                    console.log("pc");
+                    page5Container.classList.remove("swiper-container");
+                    page5Wrapper.classList.remove("swiper-wrapper");
+                    for(var i=0; i<page5Sliders.length; i++){
+                        page5Sliders[i].classList.remove("swiper-slide");
+                        page5Sliders[i].classList.add("pc-size");
+                        page5Wrapper.classList.add("pc-margin");
+                    }
                 }
-            } else {
-                console.log("pc");
-                page5Container.classList.remove("swiper-container");
-                page5Wrapper.classList.remove("swiper-wrapper");
-                for(var i=0; i<page5Sliders.length; i++){
-                    page5Sliders[i].classList.remove("swiper-slide");
-                    page5Sliders[i].classList.add("pc-size");
-                    page5Wrapper.classList.add("pc-margin");
-                }
-            }
         }
 
         browserRedirect();
