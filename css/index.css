@@ -364,7 +364,7 @@ ul{
 }
 #tabs > a{
     display: inline-block;
-    margin: 1rem;
+/*     margin: 1rem; */
     padding: 1.5rem;
 }
 #tabs > a > i{
