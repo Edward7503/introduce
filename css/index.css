@@ -195,7 +195,7 @@ ul{
 .page3 .p3-skills .right{
     overflow: auto;
     height: 25rem;
-    text-align: center;
+/*     text-align: center; */
     padding-top: 8rem;
 }
 .skills{
