@@ -423,7 +423,7 @@ ul{
 .page5 .wrapper .pc-size{
     height: 20rem;
     width: 45%;
-    visibility: visible;
+/*     visibility: visible; */
 }
 
 .page5 .wrapper,.page6 .wrapper{
@@ -448,7 +448,7 @@ ul{
     font-size: 1.6rem;
     transition: box-shadow 1s;
     color: #eee;
-    visibility: visible;
+/*     visibility: visible; */
 }
 .page5 .wrapper div:hover{
     box-shadow: 0.5rem 0.5rem 1rem #333;
